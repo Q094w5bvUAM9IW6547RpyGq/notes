@@ -306,3 +306,50 @@ router.afterEach(() => {
 
 ## 判断路由权限
 
+## 获取验证码倒计时
+
+```
+/* 获取验证码倒计时 */
+    countDownTime(seconds) {
+      const that = this;
+      seconds -= 1;
+      if (seconds < 0 || !that.vertifyForm.sending_code) {
+        that.$set(that.vertifyForm, 'sending_code', false)
+        that.$set(that.vertifyForm, 'code_msg', '获取验证码')
+        return false;
+      }
+      that.$set(that.vertifyForm, 'code_msg', `发送成功(${seconds})`)
+      setTimeout(() => {
+        that.countDownTime(seconds);
+      }, 1000);
+    },
+  }
+// 调用
+this.countDownTime(60)
+```
+
+```
+ <!-- 手机验证弹窗 -->
+    <Verify-phone-pop
+    :verifyDialogVisible="verifyDialogVisible"
+    @changeVerifyDialog="changeVerifyDialog"
+    >
+    </Verify-phone-pop>
+    import VerifyPhonePop from '../../components/VerifyPhonePop/index.vue' // 手机验证弹窗
+    components:{
+    VerifyPhonePop
+  },
+  verifyDialogVisible:false, //手机验证弹窗开关
+  
+  /* 手机验证组件打开 */
+    changeVerifyDialog(v) {
+      this.verifyDialogVisible = v
+    }
+    
+    else if(response.code === 201) {
+                  this.verifyDialogVisible = true
+                }
+```
+
+
+
