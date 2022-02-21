@@ -1834,7 +1834,7 @@ Toast(吐司)
   Vue.use(toast)
   ```
 
-### 项目优化：
+## 项目优化：
 
 ### 1.fastClick减少移动端300ms的延迟
 
