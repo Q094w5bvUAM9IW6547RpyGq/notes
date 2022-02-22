@@ -222,3 +222,23 @@ tag 表示的是离ref最近的标签，numCommits是表示这个ref与tag相差
 当ref提交记录上有某个标签时，则只输出标签名称
 ```
 
+## 强制推送到远程
+
+```
+git push -f origin main
+```
+
+
+
+## 问题
+
+### 1.git push时报了这个错：fatal: unable to access 'https://github.com/.......': OpenSSL SSL_read: Connection was reset, errno 10054。
+
+解决：
+
+```
+git config --global http.sslVerify "false"
+```
+
+再次git push 成功
+
