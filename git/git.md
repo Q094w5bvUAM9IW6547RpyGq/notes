@@ -242,3 +242,40 @@ git config --global http.sslVerify "false"
 
 再次git push 成功
 
+## git 多账号切换、账号重置
+
+```
+git config --global user.name "name"
+git config --global user.email "email"
+```
+
+> 当git中有多个账号，我们需要制定把项目拉取到某个账号下面，一下加上 ff@ 表示用ff这个账号拉取项目
+
+```
+git clone http://ff@git.rxgmy.com/wc-platform/zsgt-front-end.git
+```
+
+## push或者pull 时git报错不能连接 端口号 443
+
+![image-20220302091945983](D:\FfWork\notes\git\git.assets\image-20220302091945983.png)
+
+>  由于所拉取的gitlab项目没有配置ssh安全证书，自然连接不上
+
+方法：
+
+```
+git remote set-url origin http://ff@git.rxgmy.com/jaccount/manager-account.git
+```
+
+> 重新设置远程url 为http
+
+##  查看git 配置
+
+```git
+vim ~/.gitconfig
+```
+
+## 一个项目两个git地址
+
+[参考文章](https://www.cnblogs.com/teamemory/p/11607613.html)
+
