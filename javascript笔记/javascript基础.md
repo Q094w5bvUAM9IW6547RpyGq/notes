@@ -2493,3 +2493,7 @@ function checkSign(num) {
 checkSign(10);
 ```
 
+## JS按位非运算符(~)及双非(~~)的使用
+
+[参考文章](https://segmentfault.com/a/1190000003731938)
+
