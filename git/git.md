@@ -279,3 +279,8 @@ vim ~/.gitconfig
 
 [参考文章](https://www.cnblogs.com/teamemory/p/11607613.html)
 
+## GitLab合并请求时出现 Validate branchesCannot Create: This merge request already existed
+
+[参考文章](https://blog.csdn.net/qq_36722039/article/details/80137454)
+
+> 发起合并的时候，前面还有一个合并请求打开没有合并操作也没有关闭，需要把前面那个关闭或者合并掉
