@@ -20,3 +20,7 @@
 
 > 值为对象的选项，例如 methods、components 和 directives，将被合并为同一个对象。两个对象键名冲突时，取组件对象的键值对。
 
+## vue中ref与getElementByID的区别
+
+ [参考文章](https://blog.51cto.com/u_15127539/4521282)
+
